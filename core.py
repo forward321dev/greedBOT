@@ -41,7 +41,7 @@ def main():
         log.debug("config/config.toml does not exist.")
 
         with open("config/template_config.toml", encoding="utf8") as template_cfg_file, \
-                open(config_path, "w", encoding="utf8") as user_cfg_file:
+                open(config_path, "a", encoding="utf8") as user_cfg_file:
             # Copy the template file to the config file
             user_cfg_file.write(template_cfg_file.read())
 
